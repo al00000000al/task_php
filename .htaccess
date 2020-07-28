@@ -1,0 +1,3 @@
+# Включаем mod_rewrite
+RewriteEngine On
+RewriteRule ^(classes/|images/|pages/|vendor/|composer.json|composer.lock) - [F,L,NC]
