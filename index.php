@@ -16,6 +16,8 @@ $comm = new Comments($database);
 if(isset($_POST['author'])
     && isset($_POST['text'])
     && isset($_POST['hash'])
+    && !empty($_POST['author'])
+    && !empty($_POST['text'])
 ){
     if(checkCsrf($_POST['hash'], 'save_comment')) {
         $author = $_POST['author'];
