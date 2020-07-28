@@ -99,6 +99,8 @@ main{
     width: 86px;
     font-size: 14pt;
     font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .comment_time{
@@ -232,4 +234,9 @@ label, #author, #comment{
     font-size: 10pt;
     font-weight: 500;
     margin-bottom: 5px;
+}
+
+.comment_body{
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
