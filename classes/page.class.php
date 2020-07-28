@@ -28,6 +28,9 @@ class Page {
         $this->_page('form');
     }
 
+    /**
+     * @param $name string
+     */
     private function _page($name){
         include __DIR__.'/../pages/'.$name.'.php';
     }

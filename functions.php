@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * @param array  ...$params
+ * @return string
+ */
 function genCsrfTime(...$params){
     $ts = time();
     array_push($params, $ts);
@@ -7,6 +11,10 @@ function genCsrfTime(...$params){
     return $ts . '_' . genCsrf(...$params);
 }
 
+/**
+ * @param array  ...$params
+ * @return string
+ */
 function genCsrf(...$params){
     array_push($params, SECRET);
     $params = array_map('strval', $params);
@@ -15,6 +23,11 @@ function genCsrf(...$params){
     return md5($hash_string);
 }
 
+/**
+ * @param $hash string
+ * @param array ...$params
+ * @return bool
+ */
 function checkCsrf($hash, ...$params){
     $hash_params = explode('_', $hash);
 
