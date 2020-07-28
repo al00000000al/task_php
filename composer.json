@@ -5,7 +5,9 @@
     "autoload": {
         "files": [
             "config.php",
-            "functions.php"
+            "functions.php",
+            "classes/comments.class.php",
+            "classes/page.class.php"
         ]
     }
 }
